@@ -13,6 +13,7 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
     var jokeList = mutableListOf<JokeGenerate>()
     lateinit var retrofit : PlaceHolderApi
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -38,8 +39,7 @@ class MainActivity : AppCompatActivity() {
             id++
         }
     }
-
-        fun nextActivity() {
+        fun next() {
             val intent = Intent(this,MainActivity2::class.java)
             startActivity(intent)
 
